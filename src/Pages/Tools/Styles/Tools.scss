@@ -1,0 +1,68 @@
+.mainSection {
+  width: 99%;
+  height: 97vh;
+  padding: 10px;
+  background-color: #f7f9fb;
+  .mainSectionCenter {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 20px 0;
+  }
+  .mainSectionBottom {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    height: 76%;
+    display: flex;
+    overflow-y: auto;
+    // justify-content: center;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    .toolsContainer {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-direction: column;
+      gap: 3%;
+      height: 100%;
+      width: 100%;
+      height: 100%;
+      .active {
+        color: rgba(129, 126, 255, 1);
+      }
+      .toolsItemsDiv {
+        width: 100%;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+        padding: 13px 10px;
+        font-size: 16px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+      }
+      .toolsItemsDiv:hover {
+        color: rgba(129, 126, 255, 1);
+      }
+      .toolsItemsDivActive {
+        border-bottom: 1px solid rgba(129, 126, 255, 1);
+        p {
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}
+
+.administratorSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0 20px 20px;
+  span {
+    font-size: 20px;
+    font-weight: 500;
+    color: rgba(129, 126, 255, 1);
+  }
+}

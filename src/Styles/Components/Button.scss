@@ -1,0 +1,16 @@
+.customButton {
+  // background: rgb(129, 126, 255);
+  background: white;
+  color: rgba(129, 126, 255, 1);
+  padding: 11px 30px;
+  border-radius: 8px;
+  font-size: 16px;
+  margin: 10px 10px 0 0;
+  border: 1px solid rgba(129, 126, 255, 1);
+  cursor: pointer;
+}
+.activeCustomButton {
+  background: rgba(129, 126, 255, 1) !important;
+  color: white !important;
+  border: none !important;
+}
