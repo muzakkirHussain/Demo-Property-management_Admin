@@ -1,62 +1,43 @@
-import { produce } from "immer";
-import { create } from "zustand";
-import {
-  persist,
-  devtools,
-  createJSONStorage,
-  redux,
-} from "zustand/middleware";
+import { produce } from 'immer';
+import { create } from 'zustand';
+import { persist, devtools, createJSONStorage } from 'zustand/middleware';
 
 const initialState = {
-  user: "",
-  count: 20,
-  navState: "0",
+  user: [],
+  token: '',
+  navState: 0,
 };
 
 const useStore = create(
   devtools(
     persist(
-      (set, get) => ({
+      (set) => ({
         ...initialState,
-        // increment: () => set((state) => ({ count: state.count + 1 })),
-        navState: () =>
+        // setNavState: ({}) =>
+        //   set(
+        //     produce((state) => {
+        //       state.navState = payload;
+        //     })
+        //   ),
+        setUser: (payload) =>
           set(
             produce((state) => {
-              state.count = payload;
+              state.user = payload;
             })
           ),
-        increment: () =>
+        setToken: (payload) =>
           set(
             produce((state) => {
-              state.count = state.count + 1;
+              state.token = payload;
             })
           ),
-        setNumber: (payload) =>
-          set(
-            produce((state) => {
-              state.count = payload;
-            })
-          ),
-        decrement: () =>
-          set(
-            produce((state) => {
-              state.count = state.count - 1;
-            })
-          ),
-        increaseBy: (num) =>
-          set(
-            produce((state) => {
-              state.count = state.count + num;
-            })
-          ),
-        // getCount: () => get().count,
       }),
       {
-        name: "persist-storage",
+        name: 'persist-storage',
         storage: createJSONStorage(() => localStorage),
       }
     )
   )
 );
 
-export default useStore;
+export { useStore };

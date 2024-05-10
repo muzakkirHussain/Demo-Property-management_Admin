@@ -1,7 +1,161 @@
+// .template {
+//   display: flex;
+//   justify-content: flex-start;
+//   align-items: center;
+//   .outLet {
+//     height: 100vh;
+//     background-color: green;
+//     width: 100%;
+//     height: 98vh;
+//   }
+// }
+
+// .sideBar {
+//   max-width: 300px;
+//   min-width: 300px;
+//   width: 300px;
+//   background: rgba(0, 0, 71, 1);
+//   height: calc(100vh);
+//   display: flex;
+//   justify-content: flex-start;
+//   align-items: center;
+//   flex-direction: column;
+//   gap: 20px;
+//   &.collapsed .sideBarContent {
+//     display: none;
+//   }
+//   .sideBarTopContent {
+//     display: flex;
+//     align-items: center;
+//     justify-content: flex-start;
+//     width: 95%;
+//     padding-left: 53px;
+//     padding-top: 20px;
+//   }
+//   .sideBarCenterContent {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: flex-start;
+//     flex-direction: column;
+//     gap: 25px;
+//     width: 96%;
+//     height: 100%;
+
+//     // padding: 0 0 0 15px;
+//     .sideBarInner {
+//       display: flex;
+//       justify-content: flex-start;
+//       gap: 7px;
+//       align-items: center;
+//       flex-direction: column;
+//       width: 100%;
+//     }
+
+//     .sideBarWrapper {
+//       display: flex;
+//       // justify-content: ;
+//       align-items: center;
+//       width: 90%;
+//       width: 90%;
+//       flex-direction: column;
+//       .subDrop {
+//         display: flex;
+//         justify-content: center;
+//         align-items: flex-start;
+//         flex-direction: column;
+//         gap: 5px;
+//         padding: 0 0 0 51px;
+//         width: 66%;
+//         li {
+//           padding: 5px;
+//           color: #817eff;
+//           color: #8080a3;
+//           list-style-type: disc;
+//           font-weight: 500;
+//           cursor: pointer;
+//           width: 100%;
+//         }
+//         li:hover {
+//         }
+//       }
+//     }
+
+//     .navItemsMainDiv {
+//       width: 97%;
+//       cursor: pointer;
+//       padding-left: 20px;
+//       position: relative;
+//       display: flex;
+//       justify-content: flex-start;
+//       align-items: center;
+
+//       .navItemsDiv {
+//         display: flex;
+//         justify-content: flex-start;
+//         gap: 20px;
+//         align-items: center;
+//         width: 87%;
+//         padding: 5px 0;
+//         img {
+//           width: 40px;
+//         }
+//         .navItemsSpan {
+//           color: white;
+//           font-size: 14px;
+//           font-weight: 500;
+//         }
+//       }
+//     }
+//   }
+
+//   .sideBarBottomContent {
+//     .navItemsSpan {
+//       color: white;
+//       font-size: 14px;
+//       font-weight: 500;
+//     }
+//   }
+//   .navItemsMainDiv:hover {
+//     background-color: rgba(5, 5, 88, 1);
+//   }
+//   .navItemsMainDiv::before {
+//     content: '';
+//     position: absolute;
+//     top: 0;
+//     left: 4px;
+//     width: 2px;
+//     height: 100%;
+//     background-color: transparent;
+//     transition: background-color 0.3s ease;
+//   }
+
+//   .navItemsMainDiv:hover::before {
+//     background-color: white;
+//   }
+//   .active {
+//     background-color: rgba(5, 5, 88, 1);
+//   }
+//   .active::before {
+//     content: '';
+//     position: absolute;
+//     top: 0;
+//     left: 4px;
+//     width: 3px;
+//     height: 100%;
+//     background-color: transparent;
+//     transition: background-color 0.3s ease;
+//   }
+
+//   .active:before {
+//     background: rgba(129, 126, 255, 1);
+//   }
+// }
+
 .template {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  height: 100vh;
   .outLet {
     height: 100vh;
     background-color: green;
@@ -10,108 +164,147 @@
   }
 }
 
-.sideBar {
-  max-width: 300px;
-  min-width: 300px;
-  width: 300px;
+.sideBar,
+.collapsed {
+  width: 250px;
+  max-width: 250px;
+  min-width: 82px;
   background: rgba(0, 0, 71, 1);
   height: calc(100vh);
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  gap: 5%;
-  .sideBarTopContent {
+  gap: 20px;
+  transition: width 0.3s ease-in-out;
+  position: absolute;
+  z-index: 100;
+}
+
+.collapsed {
+  width: 82px;
+}
+.sideBarTopContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  padding-left: 19px;
+  padding-top: 20px;
+}
+.sideBarCenterContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 25px;
+  width: 96%;
+  height: 100%;
+
+  // padding: 0 0 0 15px;
+}
+.sideBarInner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.sideBarWrapper {
+  display: flex;
+  // justify-content: ;
+  align-items: center;
+  width: 90%;
+  width: 90%;
+  flex-direction: column;
+  .subDrop {
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    width: 95%;
-    padding-left: 30px;
-    padding-top: 20px;
-  }
-  .sideBarCenterContent {
-    display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: flex-start;
     flex-direction: column;
-    gap: 25px;
-    width: 96%;
-    height: 100%;
-
-    // padding: 0 0 0 15px;
-    .sideBarInner {
-      display: flex;
-      justify-content: flex-start;
-      gap: 15px;
-      align-items: center;
-      flex-direction: column;
+    gap: 10px;
+    padding: 15px 0 0 51px;
+    width: 66%;
+    li {
+      padding: 5px;
+      color: #817eff;
+      color: #8080a3;
+      list-style-type: disc;
+      font-weight: 500;
+      cursor: pointer;
       width: 100%;
     }
-
-    .navItemsMainDiv {
-      width: 97%;
-      cursor: pointer;
-      padding-left: 20px;
-      position: relative;
-
-      .navItemsDiv {
-        display: flex;
-        justify-content: flex-start;
-        gap: 20px;
-        align-items: center;
-        width: 100%;
-        padding: 5px 0;
-        img {
-          width: 40px;
-        }
-        .navItemsSpan {
-          color: white;
-          font-size: 14px;
-          font-weight: 500;
-        }
-      }
+    li:hover {
     }
   }
+}
 
-  .sideBarBottomContent {
+.navItemsMainDiv {
+  width: 97%;
+  cursor: pointer;
+  padding-left: 20px;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  .navItemsDiv {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    align-items: center;
+    width: 87%;
+    padding: 5px 0;
+    img {
+      width: 24px;
+    }
     .navItemsSpan {
       color: white;
       font-size: 14px;
       font-weight: 500;
     }
   }
-  .navItemsMainDiv:hover {
-    background-color: rgba(5, 5, 88, 1);
-  }
-  .navItemsMainDiv::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 4px;
-    width: 2px;
-    height: 100%;
-    background-color: transparent;
-    transition: background-color 0.3s ease;
-  }
+}
 
-  .navItemsMainDiv:hover::before {
-    background-color: white;
+.sideBarBottomContent {
+  .navItemsSpan {
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
   }
-  .active {
-    background-color: rgba(5, 5, 88, 1);
-  }
-  .active::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 4px;
-    width: 3px;
-    height: 100%;
-    background-color: transparent;
-    transition: background-color 0.3s ease;
-  }
+}
+.navItemsMainDiv:hover {
+  background-color: rgba(5, 5, 88, 1);
+}
+.navItemsMainDiv::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 4px;
+  width: 2px;
+  height: 100%;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
 
-  .active:before {
-    background: rgba(129, 126, 255, 1);
-  }
+.navItemsMainDiv:hover::before {
+  background-color: white;
+}
+.active {
+  background-color: rgba(5, 5, 88, 1);
+}
+.active::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 4px;
+  width: 3px;
+  height: 100%;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+.active:before {
+  background: rgba(129, 126, 255, 1);
 }

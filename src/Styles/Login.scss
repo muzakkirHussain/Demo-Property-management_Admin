@@ -1,0 +1,125 @@
+.loginMain {
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  .loginLeft {
+    height: 100%;
+    width: 50%;
+    .backgroundImage {
+      height: 100%;
+      width: 50vw;
+      background-image: url(../assets/Login/Hero.webp);
+      //   background-repeat: no-repeat;
+      //   background-attachment: fixed;
+      background-size: cover;
+      background-position: center center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      //   aspect-ratio: 16 / 9;
+      .innerContent {
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 30px;
+        .innerTop {
+          width: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          gap: 50px;
+          margin-left: 50%;
+        }
+        // .innerBottom{
+        p {
+          width: 100%;
+          color: white;
+          text-align: center;
+          font-size: 28px;
+        }
+        .borderDiv {
+          height: 2px;
+          width: 100%;
+          background-color: white;
+        }
+        // }
+      }
+    }
+  }
+  .loginRight {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    .innerContent {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+      text-align: left;
+      width: 80%;
+      gap: 40px;
+      .inputStyle {
+        background: rgba(217, 217, 217, 0.4);
+        height: 50px;
+        border-radius: 7px;
+        width: 80%;
+        padding: 4px 8px;
+      }
+    }
+    h2 {
+      font-size: 32px;
+      font-weight: 500;
+      line-height: 48.28px;
+      text-align: left;
+      color: #000047;
+    }
+    p:nth-child(2) {
+      font-size: 20px;
+    }
+    p:nth-child(5) {
+      font-size: 16px;
+      font-weight: 500;
+      color: rgba(0, 0, 71, 1);
+      cursor: pointer;
+    }
+    p:nth-child(5):hover {
+      text-decoration: underline;
+    }
+    button {
+      font-size: 21px;
+      font-weight: 500;
+      color: white;
+      background-color: rgb(129, 126, 255, 0.8);
+      padding: 7px 25px;
+      border-radius: 12px;
+    }
+    button:hover {
+      background-color: rgb(129, 126, 255, 1);
+    }
+  }
+}
+.loginMainImg1 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  opacity: 0.2;
+}
+.loginRightMainImg1 {
+  position: absolute;
+  bottom: 95%;
+  right: 33%;
+  opacity: 0.2;
+  transform: rotate(180deg);
+}

@@ -1,25 +1,29 @@
 .mainSection {
   width: 99%;
-  height: 97vh;
-  padding: 10px;
+  height: 95vh;
+  padding: 20px;
   background-color: #f7f9fb;
+  padding-left: 120px;
+  // overflow-y: auto;
   .mainSectionCenter {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     margin: 20px 0;
+    gap: 20px;
   }
   .mainSectionBottom {
     background-color: white;
-    padding: 25px;
+    padding: 25px 4px;
     border-radius: 10px;
     height: 76%;
     display: flex;
     overflow-y: auto;
-    // justify-content: center;
     justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
+    width: 98%;
+    margin: 0 10px 0 10px;
     .toolsContainer {
       display: flex;
       justify-content: flex-start;
@@ -33,7 +37,7 @@
         color: rgba(129, 126, 255, 1);
       }
       .toolsItemsDiv {
-        width: 100%;
+        width: 96%;
         border-bottom: 1px solid rgba(0, 0, 0, 0.4);
         padding: 13px 10px;
         font-size: 16px;

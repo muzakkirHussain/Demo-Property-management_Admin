@@ -1,14 +1,17 @@
-import React from "react";
-import "../Styles/Components/Button.scss";
+import React from 'react';
+import '../Styles/Components/Button.scss';
 
 const Button = (props) => {
-  const { title, handleClick, active } = props;
+  const { title, handleClick, active, disabled, styles = '' } = props;
   return (
-    // <div>
     <span>
       <button
-        className={`customButton ${active && "activeCustomButton"}`}
-        onClick={() => handleClick()}
+        className={`customButton ${active && 'activeCustomButton'}`}
+        onClick={handleClick}
+        disabled={disabled || false}
+        style={{
+          ...styles,
+        }}
       >
         {title}
       </button>

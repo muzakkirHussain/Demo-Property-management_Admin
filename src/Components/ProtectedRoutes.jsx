@@ -1,14 +1,18 @@
-import React, { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useStore } from '../Store/Store';
 
 const ProtectedRoutes = ({ children }) => {
-  const hello = true;
   const navigate = useNavigate();
+  const { token } = useStore((state) => ({
+    user: state.user,
+    token: state.token,
+  }));
   useEffect(() => {
-    if (!hello) {
-      navigate("/signin", { replace: true });
+    if (token === '') {
+      navigate('/login', { replace: true });
     }
-  }, []);
+  }, [token]);
   return children;
 };
 

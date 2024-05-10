@@ -2,15 +2,28 @@
   // background: rgb(129, 126, 255);
   background: white;
   color: rgba(129, 126, 255, 1);
-  padding: 11px 30px;
+  padding: 7.5px 20px;
   border-radius: 8px;
   font-size: 16px;
-  margin: 10px 10px 0 0;
+  // margin: 10px 10px 0 0;
   border: 1px solid rgba(129, 126, 255, 1);
   cursor: pointer;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
+
 .activeCustomButton {
   background: rgba(129, 126, 255, 1) !important;
   color: white !important;
   border: none !important;
+}
+.activeCustomButton:hover {
+  background: rgba(129, 126, 255, 0.9) !important;
+}
+
+.activeCustomButton:disabled {
+  opacity: 0.6;
 }

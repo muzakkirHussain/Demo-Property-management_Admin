@@ -1,0 +1,143 @@
+.passwordCreate {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .topLeft {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.3;
+  }
+  .bottomLeft {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    opacity: 0.3;
+  }
+  .innerPasswordCreate {
+    width: 90%;
+    max-width: 800px;
+    min-width: 350px;
+    min-height: 50%;
+    z-index: 10;
+    box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.1019607843);
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px;
+    input {
+      height: 50px;
+      border-radius: 7px;
+      width: 100%;
+      padding: 4px 8px;
+    }
+    .topSection {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px 0;
+    }
+
+    .textSection {
+      text-align: center;
+      line-height: 35px;
+      padding: 0 10px;
+    }
+    .successSection{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 31px;
+        p{
+            font-weight: 600;
+            font-size: 24px
+        }
+    }
+    .mainPasswordSection {
+      width: 90%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 30px;
+      div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(217, 217, 217, 0.4);
+        height: 50px;
+        border-radius: 7px;
+        width: 100%;
+        padding: 4px 8px;
+        color: black;
+        img{
+            cursor: pointer;
+        }
+      }
+      .innerTop {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 50px;
+        margin-left: 50%;
+      }
+      // .innerBottom{
+      p {
+        width: 100%;
+        color: white;
+        text-align: center;
+        font-size: 28px;
+      }
+      .borderDiv {
+        height: 2px;
+        width: 100%;
+        background-color: white;
+      }
+      // }
+    }
+    .footerSection {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      button {
+        font-size: 21px;
+        font-weight: 500;
+        color: white;
+        background-color: rgba(129, 126, 255, 0.8);
+        padding: 7px 25px;
+        border-radius: 12px;
+      }
+    }
+  }
+}
+
+.passwordCreate::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/src/assets/Common/Background.svg");
+  opacity: 0.1;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media screen and (min-width: 890px) {
+  .innerPasswordCreate {
+    width: 40% !important;
+  }
+  .textSection {
+    padding: 0 10%;
+  }
+}

@@ -1,11 +1,11 @@
-import React from "react";
-import "./Styles/Heading.scss";
-import arrow from "../../src/assets/Tools/headerArrow.svg";
-import search from "../../src/assets/Tools/searchIcon.svg";
-import { useNavigate } from "react-router-dom";
+import React from 'react';
+import './Styles/Heading.scss';
+import arrow from '../../src/assets/Tools/headerArrow.svg';
+import search from '../../src/assets/Tools/searchIcon.svg';
+import { useNavigate } from 'react-router-dom';
 
 const Heading = (props) => {
-  const { setSearch, paths, addons } = props;
+  const { setSearch, paths, addons = [] } = props;
   const navigate = useNavigate();
   const handleClick = (url) => {
     navigate(url);
@@ -21,7 +21,7 @@ const Heading = (props) => {
                 style={{
                   opacity: index === paths.length - 1 ? 1 : 0.6,
                   textDecoration:
-                    index !== paths.length - 1 ? "none" : "inherit",
+                    index !== paths.length - 1 ? 'none' : 'inherit',
                 }}
               >
                 {path.title}
@@ -31,7 +31,7 @@ const Heading = (props) => {
           ))}
         </div>
       </div>
-      {addons.includes("search") && (
+      {addons.includes('search') && (
         <div className="leftSection">
           <div className="search">
             <img src={search} alt="search" />
@@ -41,9 +41,10 @@ const Heading = (props) => {
               onChange={(e) => {
                 setSearch(e.target.value);
               }}
+              style={{ border: 'none' }}
             />
           </div>
-          <img src={arrow} alt="arrow" />
+          {/* <img src={arrow} alt="arrow" /> */}
         </div>
       )}
     </div>

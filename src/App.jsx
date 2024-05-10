@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 
 const App = () => {
-  return <div>Hello Bro</div>;
+  return <div>Work In Progress</div>;
 };
 
 export default App;

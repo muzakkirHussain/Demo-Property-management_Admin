@@ -1,18 +1,23 @@
-import React from "react";
-import Navbar from "../Components/Navbar";
-import Footer from "../Components/Footer";
-import { Outlet } from "react-router-dom";
-import "../Components/Navbar/Navbar.scss";
+import React from 'react';
+import { Outlet } from 'react-router-dom';
+// import { Toaster } from 'sonner';
+import { Toaster } from 'sonner';
+import Navbar from '../Components/Navbar';
+import '../Components/Navbar/Navbar.scss';
 
-const Template = () => {
+function Template() {
   return (
-    <div className="template">
-      <Navbar />
+    <>
+      <Toaster richColors closeButton />
 
-      <Outlet className="outLet" />
-      {/* <Footer /> */}
-    </div>
+      <div className="template">
+        <Navbar />
+
+        <Outlet className="outLet" />
+        {/* <Footer /> */}
+      </div>
+    </>
   );
-};
+}
 
 export default Template;
